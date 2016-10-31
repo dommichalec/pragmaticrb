@@ -22,6 +22,10 @@ class Player
     "I'm #{@name} with a health of #{@health} and a score of #{score}."
   end
 
+  def strong?
+    @health >= 100
+  end
+
   # changes health by +15
   def woot!
     puts "#{@name} got wooted!"

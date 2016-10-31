@@ -19,6 +19,9 @@ class Game
   def play
     puts "There are #{@players.size} players in #{@title}:"
     @players.each do |p|
+      p.blam!
+      p.woot!
+      p.woot!
       puts p
     end
   end
