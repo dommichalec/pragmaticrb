@@ -2,9 +2,8 @@ require_relative 'die'
 require_relative 'player'
 
 module GameTurn
-
-  # rolls die for randomness then returns whether player is blammed, wooted, or
-  # skipped
+  # module method that rolls die for randomness then returns whether player is
+  # blammed, wooted, or skipped
   def self.take_turn_for(player)
     die = Die.new
     case die.roll

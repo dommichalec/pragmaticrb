@@ -12,7 +12,7 @@ describe Player do
 
   # make sure the capitalize method works as expected
   it "should have a capitalized name" do
-    # expect(@player.name).to eq("Larry") works, too
+    # expect(@player.name).to eq("Dominic") works, too
     @player.name.should == "Dominic"
   end
 
