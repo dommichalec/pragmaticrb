@@ -9,4 +9,4 @@ knuckleheads = Game.new("KNucKLehEads")
 knuckleheads.add(moe)
 knuckleheads.add(larry)
 knuckleheads.add(curly)
-knuckleheads.play
+knuckleheads.play(1)
