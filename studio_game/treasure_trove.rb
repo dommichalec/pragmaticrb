@@ -1,3 +1,5 @@
+# Structs are used when only state is needed, not behaviors. So a full class
+# in this case is unnecessary
 Treasure = Struct.new(:name, :points)
 
 module TreasureTrove

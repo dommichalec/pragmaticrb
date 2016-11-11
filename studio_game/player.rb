@@ -1,4 +1,9 @@
+require_relative 'treasure_trove'
+require_relative 'playable'
+
 class Player
+  # module mixins
+  include Playable
   # attributes
   attr_reader :health
   attr_accessor :name
@@ -22,25 +27,16 @@ class Player
     "I'm #{@name} with a health of #{@health} and a score of #{score}."
   end
 
-  def strong?
-    @health >= 100
-  end
-
-  # changes health by +15
-  def woot!
-    puts "#{@name} got wooted!"
-    @health += 15
-  end
-
-  # changes health by -10
-  def blam!
-    puts "#{@name} got blammed!"
-    @health -= 10
-  end
-
   # returns virtual attribute score comprised of name size and health values
   def score
     @name.size + @health
+  end
+
+  # takes the player's total treasure count and breaks down the point total
+  def each_found_treasure
+    @found_treasures.each do |name, points|
+      yield Treasure.new(name, points)
+    end
   end
 
   private
